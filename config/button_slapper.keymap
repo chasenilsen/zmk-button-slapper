@@ -19,7 +19,7 @@
                         bindings = <&kp ESC>;
                 };
         };
-};
+        
         keymap {
                 compatible = "zmk,keymap";
 
