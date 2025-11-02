@@ -63,7 +63,7 @@
                 };
 
                 reset_layer {
-                        display-name = "Raise Layer";
+                        display-name = "Reset Layer";
 // -----------------------------------------------------------------------------------------
 // |      |     |     |     |     | BT1  |        |LYR 0 |     |     |     |     | reset |
 // |      |     |     |     |     | BT2  |        |LYR 1 |     |     |     |     |bootlod|
