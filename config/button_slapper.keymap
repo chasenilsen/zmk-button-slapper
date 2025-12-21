@@ -27,49 +27,49 @@
                 lower_layer {
                         display-name = "Lower Layer";
 // ------------------------------------------layer1-----------------------------------------------
-// |RSLY  | F1  | F2  | F3  | F4  | F5  |             | LYR 0|LYR 2|VOLmt |VOLdwn|VOLup| DEL  |
-// | TAB  |     |     |     |     |     |             |      |     |      |      |     | BSPC |
-// | SHFT |     |     |     |     |     |             |      |     |  UP  |      | HOME|      |
-// | CTRL |     |     |     |     |     |             |      | LFT | DWN  | RGT  | END | ENT  |
-//                    | SPC | GUI |     |             |      | ALT | SPC  |
+// | ESC  | F1  | F2  | F3  | F4  | F5  |             |      |     |      |      |     | DEL  |
+// | TAB  |     |     |     |  `  |  ~  |             |      |     |  UP  |      | HOME| BSPC |
+// | SHFT |  -  |  =  |  [  |  ]  |  \  |             |      | LFT | DWN  | RGT  | END |      |
+// | CTRL |  _  |  +  |  {  |  }  | "|" |             |      |     |      |      |     | ENT  |
+//                    | SPC | GUI | LWR |             | RSE  | ALT | SPC  |
                         bindings = <
-   &mo 3     &kp F1  &kp F2  &kp F3    &kp F4   &kp F5       &to 0   &to 2    &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &kp DEL                        
-   &kp TAB   &none   &none   &none     &none    &none        &none   &none    &none      &none        &none         &kp BSPC
-   &kp LSHFT &none   &none   &none     &none    &none        &none   &none    &kp UP     &none        &kp HOME      &none
-   &kp LCTRL &none   &none   &none     &none    &none        &none   &kp LEFT &kp DOWN   &kp RIGHT    &kp END       &kp RET
-   &none     &none   &none   &kp SPACE &kp LGUI &trans       &trans  &kp RALT &kp SPACE  &none        &none         &none
+   &kp ESC   &kp F1     &kp F2    &kp F3     &kp F4    &kp F5          &none   &none    &none      &none      &none     &kp DEL                        
+   &kp TAB   &none      &none     &none      &none     &none           &none   &none    &kp UP     &none      &kp HOME  &kp BSPC
+   &kp LSHFT &kp MINUS  &kp EQUAL &kp LBKT   &kp RBKT  &kp BSLH        &none   &kp LEFT &kp DOWN   &kp RIGHT  &kp END   &none
+   &kp LCTRL &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC  &kp PIPE        &none   &none    &none      &none      &none     &kp RET
+   &none     &none      &none     &kp SPACE  &kp LGUI  &tog 1          &tog 2  &kp RALT &kp SPACE  &none      &none     &none
                         >;
                 };
                 
                 raise_layer {
                         display-name = "Raise Layer";
 // ---------------------------------------layer2------------------------------------------------
-// |      |     |     |     |     |     |        |LYR 0|LYR 1|     |  `  |  ~  | DEL  |
-// |  TAB |  !  |  @  |  #  |  $  |  %  |        |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | SHFT |     |     |     |     |     |        |  -  |  =  |  [  |  ]  |  \  |      |
-// | CTRL |     |     |     |     |     |        |  _  |  +  |  {  |  }  | "|" | ENT  |
+// | ESC  | F1  | F2  | F3  | F4  | F5  |        |     |     |VOLmt|VOLdwn|VOLup| DEL  |
+// | TAB  |LYR 0|LYR 1|LYR 2|     |RSLY |        |     |     |     |      |     | BSPC |
+// | SHFT |     |     |     |     |     |        |     |     |     |      |     |      |
+// | CTRL |     |     |     |     |     |        |     |     |     |      |     | ENT  |
 //                    | SPC | GUI |     |        |     | ALT | SPC |
                         bindings = <
-   &trans    &trans   &trans &trans    &trans    &trans        &to 0      &to 1     &none      &kp GRAVE  &kp TILDE &kp DEL                        
-   &kp  TAB  &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp BSPC
-   &kp LSHFT &none    &none  &none     &none     &none         &kp MINUS  &kp EQUAL &kp LBKT   &kp RBKT   &kp BSLH  &none
-   &kp LCTRL &none    &none  &none     &none     &none         &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC   &kp PIPE  &kp RET
-   &none     &none    &none  &kp SPACE &kp LGUI  &trans        &trans     &kp RALT  &kp SPACE  &none      &none     &none
+   &kp ESC   &kp F1  &kp F2  &kp F3    &kp F4    &kp F5        &none      &none     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp DEL                        
+   &kp  TAB  &to 0   &to 1   &to 2     &none     &mo 3         &none      &none     &none      &none        &none        &kp BSPC
+   &kp LSHFT &none   &none   &none     &none     &none         &none      &none     &none      &none        &none        &none
+   &kp LCTRL &none   &none   &none     &none     &none         &none      &none     &none      &none        &none        &kp RET
+   &none     &none   &none   &kp SPACE &kp LGUI  &trans        &trans     &kp RALT  &kp SPACE  &none        &none        &none
                         >;
                 };
 
                 reset_layer {
                         display-name = "Reset Layer";
 // ----------------------------------------layer3-----------------------------------------------
-// |      |     |     |     |     | BT1  |        |LYR 0 |     |     |     |     | reset |
-// |      |     |     |     |     | BT2  |        |LYR 1 |     |     |     |     |bootlod|
-// |      |     |     |     |     | BT3  |        |LYR 2 |     |     |     |     |  off  |
+// |      |     |     |     |     | BT1  |        |      |     |     |     |     | reset |
+// |      |LYR 0|LYR 1|LYR 2|     | BT2  |        |      |     |     |     |     |bootlod|
+// |      |     |     |     |     | BT3  |        |      |     |     |     |     |  off  |
 // |      |     |     |     |     | BTCLR|        |      |     |     |     |     |       |
 //                    |     |     |      |        |      |     |     |
                         bindings = <
-   &none   &none   &none   &none   &none   &bt BT_SEL 0       &to 0   &none   &none   &none   &none  &sys_reset                        
-   &none   &none   &none   &none   &none   &bt BT_SEL 1       &to 1   &none   &none   &none   &none  &bootloader
-   &none   &none   &none   &none   &none   &bt BT_SEL 2       &to 2   &none   &none   &none   &none  &soft_off
+   &none   &none   &none   &none   &none   &bt BT_SEL 0       &none   &none   &none   &none   &none  &sys_reset                        
+   &none   &to 0   &to 1   &to 2   &none   &bt BT_SEL 1       &none   &none   &none   &none   &none  &bootloader
+   &none   &none   &none   &none   &none   &bt BT_SEL 2       &none   &none   &none   &none   &none  &soft_off
    &none   &none   &none   &none   &none   &bt BT_CLR         &none   &none   &none   &none   &none  &none
    &none   &none   &none   &none   &none   &none              &none   &none   &none   &none   &none  &none
                         >;
