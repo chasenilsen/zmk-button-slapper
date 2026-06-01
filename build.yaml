@@ -18,8 +18,10 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+board: [ "nice_nano" ]
+shield: [ "button_slapper_left", "button_slapper_right" ]
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: button_slapper_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: button_slapper_right
